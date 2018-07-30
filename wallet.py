@@ -17,7 +17,8 @@ portomonnee=wallet(10,8,5,'portomonnee')
 cardholder=wallet(0,4,0,'cardholder')
 
 obj_wallet=[potmoni,portomonnee,cardholder]
+sleeves=[13,15,7]
 
-for i in obj_wallet:
+for i,n in zip(obj_wallet,sleeves):
     i.hoeveel()
-    i.vakjes(20)
+    i.vakjes(n)
