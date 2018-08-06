@@ -1,11 +1,5 @@
-'''bosterpack v2
-just checking inventory costs less resources,
-is faster.
-er is geen data die word gestuurd om te zien 
-of een item een boosterpack is. Dus met er via
-pillow sample pixels genomen worden om te zien 
-of een item een boosterpack is.
-
+'''Checks Steam inventory for boosterpacks and writes to csv.
+Expects id.txt to be in the same folder with {"steam64" : <steam64id>}
 '''
 
 import json, requests, re, datetime, csv
@@ -51,4 +45,5 @@ def write_data(lijstje,counter):
         writer=csv.writer(output)
         writer.writerow([dt.strftime("%Y-%m-%d"), lijstje, counter])
 
-main()
+if __name__=='__main__':
+    main()
