@@ -22,7 +22,7 @@ def bpacks():
     #scrape inventory
     with open('id.txt') as input:
         j=json.loads(input.read())
-        url='https://steamcommunity.com/inventory/{}/753/6?count=5'.format(j['steam64'])
+        url='https://steamcommunity.com/inventory/{}/753/6?count=10'.format(j['steam64'])
         r=requests.get(url, headers=header)
 
     #count boosters
