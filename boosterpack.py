@@ -62,8 +62,9 @@ def trades():
         j = json.loads(input.read())
         epoch = day.timestamp()
         url = 'https://api.steampowered.com/IEconService/GetTradeHistory/v1/'
-        args = '?key={}&max_trades=500&start_after_time={}'
-               '&navigating_back=1&include_failed=0'.format(j['apikey'], int(epoch))
+        args = '?key={}&max_trades=500&start_after_time={}'\
+               '&navigating_back=1&include_failed=0'\
+               .format(j['apikey'], int(epoch))
         r = requests.get(url+args, headers=header)
         if r.status_code != 200:
             raise Exception('Request failed with {}'.format(r.status_code))
