@@ -74,7 +74,7 @@ def trades():
 def write(b, c, t=0):
     with open('bpacks.csv', 'a', newline='') as output:
             writer = csv.writer(output)
-            writer.writerow([day.strftime("%Y-%m-%d"), c, b, t])
+            writer.writerow([day.strftime("%Y-%m-%d"), t, c, b])
 
 if __name__ == '__main__':
     main()
