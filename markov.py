@@ -1,7 +1,7 @@
 '''simple markov generator'''
 from numpy.random import choice
 
-with open('markov.txt') as tesla:
+with open('Teslacoil.txt') as tesla:
     text = tesla.readline()
 woorden = text.split()
 
@@ -19,7 +19,7 @@ for word_1, word_2 in pair:
 
 start = choice(woorden)
 chain = [start]
-n_words = 120
+n_words = 20
 
 for i in range(n_words):
     chain.append(choice(dictio[chain[-1]]))
