@@ -1,4 +1,7 @@
 *.txt
 *.json
+*.sqlite3
 __pycache__/
 .vscode/
+.venv/
+files/
